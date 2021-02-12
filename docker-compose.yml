@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    events:
+      build: .
+      image: events
+      volumes:
+        - .:/usr/src/app
+      ports:
+        -  '5000:5000'
