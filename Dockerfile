@@ -8,6 +8,8 @@ WORKDIR /flask-deploy
 
 COPY ./requirements.txt /flask-deploy/requirements.txt
 
+COPY ./*.* /flask-deploy/
+
 RUN pipenv install --system --skip-lock
 
 RUN pip install -r /flask-deploy/requirements.txt
